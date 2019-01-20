@@ -43,6 +43,16 @@ $config = [
             ],
         ],
         'db' => $db,
+        
+        'view' => [
+        'theme' => [
+            //'baseUrl' => '@web/themes/freelancer',
+            'pathMap' => ['@app/views' =>['@webroot/themes/freelancer/views/layouts'],
+                                          ['@webroot/themes/freemod/views/layouts'], 
+                                        ],
+            //'pathMap' => ['@app/widgets' => '@app/themes/freelancer/widgets'],
+            ],
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -53,6 +63,7 @@ $config = [
         */
     ],
     'params' => $params,
+
 ];
 
 if (YII_ENV_DEV) {

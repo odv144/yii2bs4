@@ -15,6 +15,10 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+    
+    public $layout='@app/themes/freelancer/views/layouts/main.php';//de esta forma llamo a la carpeta del tema que quiero usar.
+    
+    
     public function behaviors()
     {
         return [
@@ -61,6 +65,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+       
         return $this->render('index');
     }
 
